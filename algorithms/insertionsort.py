@@ -1,23 +1,23 @@
-
+# copied code from https://www.geeksforgeeks.org/insertion-sort/
 class Insertionsort:
 
-    def sort(self, input_list):
-        output_list = []
-        for i in input_list:
-            if len(output_list) != 0:
-                j = 0
-                while i > output_list[j] and j < len(output_list)-1:
-                    j += 1
-                    if j == len(output_list)-1:
-                        j+= 1
-                        break
-                output_list.insert(j, i)
-            else:
-                output_list.insert(0, i)
+    @staticmethod
+    def sort(arr):
+        # Traverse through 1 to len(arr)
+        for i in range(1, len(arr)):
 
-        return output_list
+            key = arr[i]
+
+            # Move elements of arr[0..i-1], that are
+            # greater than key, to one position ahead
+            # of their current position
+            j = i - 1
+            while j >= 0 and key < arr[j]:
+                arr[j + 1] = arr[j]
+                j -= 1
+            arr[j + 1] = key
+
+        return arr
 
 
-sort = Insertionsort()
-print(sort.sort([1, 56, 5678, -1, 343, -78, 50505002, 3432, 1, 4567654345676543456]))
 

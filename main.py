@@ -5,11 +5,12 @@ from algorithms.bubblesort import Bubblesort
 from algorithms.quicksort import Quicksort
 from algorithms.mergesort import Mergesort
 from algorithms.selectionsort import Selectionsort
+from algorithms.insertionsort import Insertionsort
 import numpy as np
 
 int_list = []
 times = []
-algorithms = {"bubblesort":Bubblesort(),"quicksort":Quicksort(), "mergesort":Mergesort(), "selectionsort":Selectionsort()}
+algorithms = {"bubblesort":Bubblesort(),"quicksort":Quicksort(), "mergesort":Mergesort(), "selectionsort":Selectionsort(), "insertionsort":Insertionsort()}
 chosen_alg = ""
 length = [2, 4, 6, 8, 10, 15, 20, 30, 40, 50, 70, 100, 150, 200, 300, 400, 500, 650, 850, 1000]
 
